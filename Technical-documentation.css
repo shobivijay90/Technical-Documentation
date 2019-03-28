@@ -1,0 +1,61 @@
+body{
+  font-family: Helvetica;
+}
+#main-doc{
+  display: flex;
+}
+
+#side-bar{
+  width: 30%;
+  height: 100%;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 5px lightgray;
+  font-family: Helvetica;
+  text-align: center;
+  position: fixed;
+}
+#documentation{
+  display: inline-block;
+  position: relative;
+  left: 400px;
+  margin-left: 20px;
+  
+}
+
+.contents{
+  font-size: 20px;
+  padding-top: 20px ;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  border-top: 1px solid black;
+  text-align: left;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  width: 800px;
+  margin-left: 10px;
+  text-align: justify;
+}
+li{
+  width: 700px;
+}
+
+pre{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+#mdn{
+  text-decoration: underline;
+  color: blue;
+}
+
+#topics{
+  height: 100%;
+  overflow-y:scroll;
+}
