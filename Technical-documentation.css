@@ -1,38 +1,48 @@
+
+#js-doc{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
 body{
   font-family: Helvetica;
 }
-#main-doc{
+.main-doc{
   display: flex;
+  margin-bottom: 10px;
 }
 
-#side-bar{
+.side-bar{
   width: 30%;
-  height: 100%;
+  order: 0;
   border: 2px solid gray;
   box-shadow: 5px 5px 5px lightgray;
   font-family: Helvetica;
   text-align: center;
-  position: fixed;
+  position: relative;
+  height: 100vh;
 }
 #documentation{
-  display: inline-block;
   position: relative;
-  left: 400px;
-  margin-left: 20px;
-  
+  width: 60%;
+  margin: 0 20px;
+  order: 1;
 }
 
 .contents{
   font-size: 20px;
-  padding-top: 20px ;
+  padding-top: 5px ;
   padding-left: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-top: 1px solid black;
   text-align: left;
 }
 a{
   text-decoration: none;
   color: black;
+  padding-top: 10px;
 }
 
 p{
@@ -56,6 +66,85 @@ pre{
 }
 
 #topics{
-  height: 100%;
-  overflow-y:scroll;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  height: 80vh;
+  
+}
+
+@media screen and (max-width: 700px){
+  *{
+    font-size: 16px;
+  }
+  .contents{
+    font-size: 20px;
+  }
+   .main-doc{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .side-bar{
+    order: 0;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+    position: relative;
+  }
+  #topics{
+    height: 60%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #documentation{
+    order: 1;
+    width: 100vw;
+    word-wrap: break-word;
+    text-align: justify;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  code{
+    font-size: 10px;
+    padding: 0 5px;
+  }
+  p{
+    width: 80vw;
+    padding-left: auto;
+    padding-right: auto;
+    font-size: 14px;
+  }
+  li{
+    font-size: 14px;
+    width: 70vw;
+  }
+  pre{
+    width: 80vw;
+    margin-left: 5px;
+  }
+  .nested-list li{
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px){
+  .main-doc{
+    display: flex;
+  }
+  
+  .side-bar{
+      width: 40%;    
+  }
+  
+  #documentation{
+    width: 60%;
+  }
+  p{
+    width: 100%; 
+  }
+  li{
+    width: 90%;
+  }
+  
 }
